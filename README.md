@@ -1,6 +1,5 @@
 # Among-us-game-simulator
-Created a simulated version of the popular murder mystery game Among-Us. Used objects and classes in python. 
-Created 2 subclasses crewperson and pretender from character class, and I also created a game class to help simulate a game, check winner, and do meetings.
+Created a text-based social deduction game in which players board a spaceship bound for Jupiter to do scientific research. Each player takes on the role of a Character with one of two specializations: Crewperson or Pretender. The Crewpersons' goal is to keep the ship running well by doing things like mending wiring, clearing waste chutes, and identifying and removing Pretenders from the ship. The Pretenders' purpose is to eliminate Crewpersons in a stealthy manner, preventing the crew from completing their task.
 To properly run the program you need to do 3 things. Create a list of characters of your choice, create a Game object, and run the play_game() method for the Game object
 Just like I did at the end of my code.
  For example:
