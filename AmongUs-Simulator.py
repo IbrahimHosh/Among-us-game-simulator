@@ -3,7 +3,6 @@ class Character:
     '''
     Creates an object that represents a character.
     The instance variables for this class are self.name is name ,self.color is color ,self.hat is hat ,self.status is the characters status,self.task_list is the list of tasks remaining.
-    and what does each represent in a few words?)
     __ init__ creates the instance variables, repr gives chracter information, get identity gets charchters identity.
     '''
     def __init__(self,name,color,hat,num_tasks):
@@ -33,8 +32,7 @@ class Character:
 class Crewperson(Character):
     '''
     Represents a crewperson object
-    inherits all instance variables from character.( I wasn't trying to list all the instance variables again)
-    and what does each represent in a few words?)
+    inherits all instance variables from character.
     __init__ creates the instance variables,get identity gets charchters identity, and tasks list removes 1 task and prints that task.
     '''
     def __init__(self,name,color,hat,num_tasks):
