@@ -1,10 +1,10 @@
 import random
 class Character:
     '''
-    Purpose: (What does an object of this class represent?) Creates an object that represents a character.
-    Instance variables: (What are the instance variables for this class,) The instance variables for this class are self.name is name ,self.color is color ,self.hat is hat ,self.status is the characters status,self.task_list is the list of tasks remaining.
+    Creates an object that represents a character.
+    The instance variables for this class are self.name is name ,self.color is color ,self.hat is hat ,self.status is the characters status,self.task_list is the list of tasks remaining.
     and what does each represent in a few words?)
-    Methods: (What methods does this class have, and what does each do in a few words?)__init__ creates the instance variables, repr gives chracer information, get identity gets charchters identity.
+    __ init__ creates the instance variables, repr gives chracter information, get identity gets charchters identity.
     '''
     def __init__(self,name,color,hat,num_tasks):
         self.name = name
@@ -32,10 +32,10 @@ class Character:
         return 'Character'
 class Crewperson(Character):
     '''
-    Purpose: (What does an object of this class represent?) Represents a crewperson object
-    Instance variables: (What are the instance variables for this class,) inherits all instance variables from character.( I wasn't trying to list all the instance variables again)
+    Represents a crewperson object
+    inherits all instance variables from character.( I wasn't trying to list all the instance variables again)
     and what does each represent in a few words?)
-    Methods: (What methods does this class have, and what does each do in a few words?)__init__ creates the instance variables,get identity gets charchters identity, and tasks list removes 1 task and prints that task.
+    __init__ creates the instance variables,get identity gets charchters identity, and tasks list removes 1 task and prints that task.
     '''
     def __init__(self,name,color,hat,num_tasks):
         super().__init__(name,color,hat,num_tasks)
@@ -49,10 +49,9 @@ class Crewperson(Character):
             print(self.name + ' has completed all their tasks.')
 class Pretender(Character):
     '''
-    Purpose: (What does an object of this class represent?) Represents a pretender object
-    Instance variables: (What are the instance variables for this class,) inherits all instance variables from character. I wasn't trying to list all the instance variables again)
-    and what does each represent in a few words?)
-    Methods: (What methods does this class have, and what does each do in a few words?)__init__ creates the instance variables,get identity gets charchters identity, and eliminate changes a targets status
+    Represents a pretender object
+    inherits all instance variables from character.
+    __init__ creates the instance variables,get identity gets charchters identity, and eliminate changes a targets status
     '''
     def __init__(self,name,color,hat,num_tasks):
         super().__init__(name,color,hat,num_tasks)
@@ -63,10 +62,9 @@ class Pretender(Character):
         print(self.name+" eliminated "+ target.name+'.')
 class Game:
     '''
-    Purpose: (What does an object of this class represent?) creates an object that helps simulates a game
-    Instance variables: (What are the instance variables for this class,) The instance variable is a player list
-    and what does each represent in a few words?)
-    Methods: (What methods does this class have, and what does each do in a few words?) __init__ creates instance variables, check_winner checks the winner, meeting method simulates a meeting, and playgame method plays a game.
+    creates an object that helps simulates a game
+    The instance variable is a player list
+    __init__ creates instance variables, check_winner checks the winner, meeting method simulates a meeting, and playgame method plays a game.
     '''
     def __init__(self,player_list):
         self.player_list = player_list
@@ -129,3 +127,15 @@ class Game:
             G = self.check_winner()
             if G != '-':
                 return G
+p_list = [Pretender("Jerry", "Blue", "mohawk", 6),
+              Crewperson("Jackson", "Orange", "bird nest", 6),
+              Crewperson("Yuchen", "Purple", "witch hat", 6),
+              Crewperson("Zaela", "White", "party hat", 6),
+              Crewperson("Audrey", "Lime", "wet floor sign", 5),
+              Crewperson("Rachel", "Pink", "sticky note", 5),
+              Crewperson("Nikhil", "Cyan", "pirate hat", 5),
+              Pretender("Julia", "Yellow", "green fedora", 5),
+              Crewperson("Greta", "Brown", "lab goggles", 5),
+              Crewperson("Nate", "Red", "banana peel", 5)]
+g = Game(p_list)
+g.play_game()
